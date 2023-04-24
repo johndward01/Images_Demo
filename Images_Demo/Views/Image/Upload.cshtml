@@ -1,0 +1,17 @@
+﻿@model ImageViewModel
+
+<div class="container border border-3">
+    <form asp-controller="Image" asp-action="Upload" method="post" enctype="multipart/form-data">
+        <div class="form-group m-3">
+            <label asp-for="@Model.Name" class="control-label"></label>
+            <input type="text" asp-for="@Model.Name" />
+        </div>
+        <div class="form-group m-3">
+            <label asp-for="@Model.Data" class="control-label"></label>
+            <input type="file" asp-for="@Model.Data" />
+        </div>
+        <div class="form-group m-3">
+            <input type="submit" value="Upload!" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
